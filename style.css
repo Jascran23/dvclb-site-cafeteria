@@ -18,27 +18,30 @@
     font-family: "Roboto", sans-serif;
 }
 
+html, body{
+    width: 100%;
+}
+
 body{
     background-color: var(--bg);
+    
 }
 
 section{
+    width: 100%;
     padding: 3rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
 }
 
 .header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
+    width: 100%;
     border-bottom: var(--border);
     background-color: var(--bg);
 }
 
 .header section{
+    position: sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,6 +51,17 @@ section{
 
 .header section .logo img{
     width: 60px;
+}
+
+.header section .icon-menu-list{
+    display: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.header #navbar-mobile{
+    display: none;
 }
 
 .header section .navbar ul{
@@ -74,6 +88,11 @@ section{
     border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
     
+}
+
+.header section .icons{
+    width: 80px;
+    text-align: center;
 }
 
 .header section img{
@@ -131,13 +150,23 @@ section{
 
 .about .row{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     background-color: var(--black);
     gap: 1.5rem;
+    width: 100%;
+    padding: 15px;
+}
+
+.about .row img{
+    
+    width: 100%;
 }
 
 .about .row .content{
     padding: 2rem;
+    text-align: center;
 }
 
 .about .row .content h3{
@@ -237,7 +266,9 @@ color: wnite;
 .address {
     display: flex;
     align-items: center;
-    flex-direction: column;  
+    flex-direction: column; 
+    padding: 10px; 
+    width: 100%;
 }
 
 .address .container-map{
@@ -267,4 +298,44 @@ footer .share i{
 
 footer .share i:hover{
     background-color: var(--main-color);
+}
+
+@media screen and (max-width: 584px){
+    
+    .header section .icon-menu-list{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .header .active{
+        display: block;
+    }
+
+    .header section .navbar ul{
+        display: none;
+        gap: 10px;
+    }
+
+     .header #navbar-mobile ul{
+        text-align: center;
+        padding: 5px;
+    }
+
+    .header #navbar-mobile ul li{
+        padding: 1rem 0;
+        list-style: none;
+        cursor: pointer;
+    }
+    .header #navbar-mobile ul li:hover{
+        background-color: #fff;
+    }
+    .header #navbar-mobile ul li:hover a{
+       color: #000;
+       font-weight: 600;
+    }
+
+    .header #navbar-mobile ul li a{
+        font-size: 1.5rem;
+        color: #fff;
+    }
 }
