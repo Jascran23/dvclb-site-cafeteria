@@ -63,10 +63,6 @@ section{
     cursor: pointer;
 }
 
-.header #navbar-mobile{
-    display: none;
-}
-
 .header section .navbar ul{
     display: flex;
     gap: 10px;
@@ -89,8 +85,26 @@ section{
 .header section .navbar ul li:hover a{
     color: var(--main-color);
     border-bottom: 0.1rem solid var(--main-color);
-    padding-bottom: 0.5rem;
-    
+    padding-bottom: 0.5rem; 
+}
+
+.header #navbar-mobile ul li{
+    padding: 1rem 0;
+    list-style: none;
+    cursor: pointer;
+    transform: translateX(-350px);
+}
+.header #navbar-mobile ul li:hover{
+    background-color: #fff;
+}
+.header #navbar-mobile ul li:hover a{
+    color: #000;
+    font-weight: 600;
+}
+
+.header #navbar-mobile ul li a{
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 .header section .icons{
@@ -316,16 +330,29 @@ footer .share i:hover{
 
 /*ANIMAÇÕES*/
 @keyframes effectFade{
-     0%{
+    from{
         opacity: 0;
     }
 
-    100%{
+    to{
         opacity: 1;
     }
 }
 
+@keyframes effectTranslate{
+    from{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
 
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* RESPONSIVIDADE */
 @media screen and (max-width: 584px){
     
     .header section .icon-menu-list{
@@ -344,21 +371,5 @@ footer .share i:hover{
         padding: 5px;
     }
 
-    .header #navbar-mobile ul li{
-        padding: 1rem 0;
-        list-style: none;
-        cursor: pointer;
-    }
-    .header #navbar-mobile ul li:hover{
-        background-color: #fff;
-    }
-    .header #navbar-mobile ul li:hover a{
-       color: #000;
-       font-weight: 600;
-    }
-
-    .header #navbar-mobile ul li a{
-        font-size: 1.5rem;
-        color: #fff;
-    }
+    
 }
