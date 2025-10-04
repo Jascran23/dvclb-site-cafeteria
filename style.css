@@ -130,6 +130,7 @@ section{
     margin-top: 1rem;
     display: inline-block;
     animation: effectTranslate 1s ease-in;
+    border-radius: 1rem;
 }
 
 .btn:hover{
@@ -296,6 +297,8 @@ color: wnite;
     width: 90%;
     max-width: 600px;
     height: 450px;
+    border-radius: 3rem;
+    overflow: hidden;
 }
 
 .address .container-map iframe{
