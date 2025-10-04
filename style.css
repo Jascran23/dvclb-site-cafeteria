@@ -88,25 +88,6 @@ section{
     padding-bottom: 0.5rem; 
 }
 
-.header #navbar-mobile ul li{
-    padding: 1rem 0;
-    list-style: none;
-    cursor: pointer;
-    transform: translateX(-350px);
-}
-.header #navbar-mobile ul li:hover{
-    background-color: #fff;
-}
-.header #navbar-mobile ul li:hover a{
-    color: #000;
-    font-weight: 600;
-}
-
-.header #navbar-mobile ul li a{
-    font-size: 1.5rem;
-    color: #fff;
-}
-
 .header section .icons{
     width: 80px;
     text-align: center;
@@ -374,6 +355,23 @@ footer .share i:hover{
         text-align: center;
         padding: 5px;
     }
+  
+    .header #navbar-mobile ul li{
+        padding: 1rem 0;
+        list-style: none;
+        cursor: pointer;
+        transform: translateX(-350px);
+    }
+    .header #navbar-mobile ul li:hover{
+        background-color: #fff;
+    }
+    .header #navbar-mobile ul li:hover a{
+        color: #000;
+        font-weight: 600;
+    }
 
-    
+    .header #navbar-mobile ul li a{
+        font-size: 1.5rem;
+        color: #fff;
+    }
 }

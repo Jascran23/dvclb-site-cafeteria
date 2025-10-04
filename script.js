@@ -24,3 +24,17 @@ btnIconMobile.addEventListener(('click'), ()=> {
         }
 
 })
+
+function esconderMenu() {
+    menuList.style.display = 'none';
+}
+
+function verificarJanela(){
+    const larguraMinima = 585;
+
+    if (window.innerWidth >= larguraMinima){
+        esconderMenu();
+    }
+}
+
+window.addEventListener('resize', verificarJanela);
