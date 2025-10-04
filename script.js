@@ -7,7 +7,7 @@ btnIconMobile.addEventListener(('click'), ()=> {
         menuList.style.display = 'block';
         
     navLinks.forEach((link, index) => {  
-        link.style.animation = `effectTranslate 2s ease forwards ${
+        link.style.animation = `effectTranslate 0.5s ease-in forwards ${
         index / 7 + 0.1
         }s`;
     });
